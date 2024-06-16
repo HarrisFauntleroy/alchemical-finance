@@ -1,0 +1,56 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <span class="h5"><%= t("users") %></span>
+        </div>
+        <div class="card-body">
+          <h1 class="display-4"><%= @user.username %></h1>
+          <hr>
+          <h2 class="h5"><%= t("recent_activity") %></h2>
+
+          <% if @recent_topics_opened.any? || @recent_comments.any? %>
+            <% if @recent_topics_opened.any? %>
+              <h3 class="h6 mt-3"><%= t("threads_opened") %>
+                (<%= @user.topics.count %>)</h3>
+              <ul class="list-group">
+                <% @recent_topics_opened.each do |topic| %>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <%= link_to topic.title, forum_topic_path(topic.forum, topic) %>
+                    <small class="text-muted">
+                      (<%= topic.created_at.strftime("%d %b %Y at %I:%M %p") %>)
+                    </small>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+
+            <% if @recent_comments.any? %>
+              <h3 class="h6 mt-3"><%= t("recent_comments") %>
+                (<%= @user.comments.count %>)</h3>
+              <ul class="list-group">
+                <% @recent_comments.each do |comment| %>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <%= link_to truncate(comment.content, length: 50),
+                    topic_comment_path(comment.topic, comment) %>
+                    <span>
+                      (in
+                      <%= link_to comment.topic.title,
+                      forum_topic_path(comment.topic.forum, comment.topic) %>)
+                    </span>
+                    <small class="text-muted">
+                      (<%= comment.created_at.strftime("%d %b %Y at %I:%M %p") %>)
+                    </small>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          <% else %>
+            <p class="text-muted"><%= t("no_recent_activity_to_display") %>.</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

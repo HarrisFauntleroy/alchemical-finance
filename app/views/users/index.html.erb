@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <div>
+      <span>
+        <%= t("users") %>
+      </span>
+    </div>
+  </div>
+
+  <div>
+    <h1>All Users</h1>
+
+    <% @users.each do |user| %>
+      <div>
+        <%= link_to user.username, user_path(user) %>
+        <% if user.admin? %>
+          <span>(Admin)</span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
