@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html class="min-h-screen flex flex-1">
   <head>
     <title>FinanceRails</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-100 text-gray-800">
+  <body class="min-h-full flex flex-1 bg-gray-100 text-gray-800">
     <% if notice %>
       <p class="bg-blue-100 text-blue-800 px-4 py-2 rounded-md"><%= notice %></p>
     <% end %>
@@ -18,7 +18,7 @@
       <p class="bg-red-100 text-red-800 px-4 py-2 rounded-md"><%= alert %></p>
     <% end %>
 
-    <main class="">
+    <main class="flex flex-1 flex-col h-full">
       <%= render "shared/navbar" %>
       <%= yield %>
     </main>
