@@ -2,7 +2,7 @@
 
 class BudgetsController < ApplicationController
   def index
-    @accounts = Account.all
+    @budgets = Budget.all
   end
 
   private

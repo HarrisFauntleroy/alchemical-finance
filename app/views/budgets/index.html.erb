@@ -1,35 +1,51 @@
 <div class="container mx-auto mt-4">
   <h1 class="text-2xl font-semibold">Budgets</h1>
-  <div class="flex gap-4 mt-4">
-    <span><%= link_to "New Account", new_account_path, class: "hover:text-blue-400" %></span>
-  </div>
 
-  <table class="table-auto mt-4">
-    <thead>
-      <tr>
-        <th class="px-4 py-2">Name</th>
-        <th class="px-4 py-2">Balance</th>
-        <th class="px-4 py-2">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @accounts.each do |account| %>
-        <tr>
-          <td class="border px-4 py-2"><%= account.name %></td>
-          <td class="border px-4 py-2"><%= number_to_currency(account.balance) %></td>
-          <td class="border px-4 py-2">
-            <%= link_to "Show", account, class: "hover:text-blue-400" %>
-            <%= link_to "Edit", edit_account_path(account), class: "hover:text-blue-400" %>
-            <%= link_to "Delete",
-            account,
-            method: :delete,
-            data: {
-              confirm: "Are you sure?",
-            },
-            class: "hover:text-red-400" %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <div class="container mx-auto px-4 py-8">
+    <!-- New Budget Button -->
+    <div class="text-right mb-4">
+      <%= link_to "Add New Budget",
+      new_budget_path,
+      class:
+        "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out" %>
+    </div>
+    <!-- Budgets Table -->
+    <div class="overflow-x-auto relative shadow-lg rounded-lg">
+      <table class="w-full text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+          <tr>
+            <th scope="col" class="py-3 px-6">Budget Name</th>
+            <th scope="col" class="py-3 px-6">Details</th>
+            <th scope="col" class="py-3 px-6">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @budgets.each do |budget| %>
+            <tr
+              class="
+                bg-white border-b hover:bg-gray-100 transition duration-300 ease-in-out
+              "
+            >
+              <td class="py-4 px-6"><%= budget.name %></td>
+              <td class="py-4 px-6"><%= budget.details %></td>
+              <td class="py-4 px-6 flex items-center">
+                <%= link_to edit_budget_path(budget), class: "text-blue-600 hover:text-blue-900 transition duration-300 ease-in-out" do %>
+                  <i class="fas fa-edit mr-2"></i>Edit
+                <% end %>
+                <%= link_to budget, method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:text-red-900 ml-4 transition duration-300 ease-in-out" do %>
+                  <i class="fas fa-trash-alt mr-2"></i>Delete
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <!-- No Budgets Found Message -->
+    <% if @budgets.empty? %>
+      <div class="text-center py-8">
+        <p class="text-gray-500">No budgets found.</p>
+      </div>
+    <% end %>
+  </div>
 </div>
