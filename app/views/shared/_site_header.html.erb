@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%= root_path %>"><%= t("branding") %></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <%= link_to t("news"), root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t("forums"), forums_path, class: "nav-link", id: "forums_link" %>
+        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="user-profile"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <%= current_user.username %>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user-profile">
+              <% if current_user.admin? %>
+                <li><span class="dropdown-item text-danger"><%= t("admin") %></span></li>
+              <% elsif current_user.moderator? %>
+                <li><span class="dropdown-item text-warning"><%= t("moderator") %></span></li>
+              <% else %>
+                <li><span class="dropdown-item text-secondary"><%= t("user") %></span></li>
+              <% end %>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= button_to t("devise.sign_out"),
+                destroy_user_session_path,
+                method: :delete,
+                id: "sign-out",
+                class: "dropdown-item btn btn-outline-danger" %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t("devise.sign_in"),
+            new_user_session_path,
+            class: "nav-link",
+            id: "sign-in" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("devise.sign_up"),
+            new_user_registration_path,
+            class: "nav-link",
+            id: "sign-up" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
