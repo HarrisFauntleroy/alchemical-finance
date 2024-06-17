@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Budgets management', :js, type: :system do
+RSpec.describe 'Budgets management', :js do
   let(:user) { create(:user) }
 
   before do
@@ -145,23 +145,23 @@ RSpec.describe 'Budgets management', :js, type: :system do
     end
 
     it 'no longer displays the deleted budget name' do
-      expect(page).not_to have_content('Delete Budget')
+      expect(page).to have_no_content('Delete Budget')
     end
 
     it 'no longer displays the deleted budget amount' do
-      expect(page).not_to have_content('3000')
+      expect(page).to have_no_content('3000')
     end
 
     it 'no longer displays the deleted budget category' do
-      expect(page).not_to have_content('Healthcare')
+      expect(page).to have_no_content('Healthcare')
     end
 
     it 'no longer displays the deleted budget currency' do
-      expect(page).not_to have_content('CAD')
+      expect(page).to have_no_content('CAD')
     end
 
     it 'no longer displays the deleted budget frequency' do
-      expect(page).not_to have_content('Quarterly')
+      expect(page).to have_no_content('Quarterly')
     end
   end
 end

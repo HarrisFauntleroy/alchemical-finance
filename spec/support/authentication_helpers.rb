@@ -14,11 +14,11 @@ module AuthenticationHelpers
     visit new_user_session_path
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: user.password
-    click_button 'Log in'
+    click_button 'Sign in'
   end
 
   def sign_out
-    find('#user-profile').click
+    find_by_id('user-profile').click
     click_button 'Sign out'
   end
 end
