@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Controller for managing budgets...
+# Budgets should have a name, a category, a frequency, and an amount
 class BudgetsController < ApplicationController
   before_action :set_budget, only: %i[show edit update destroy]
 
