@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# Controller for managing the home page...
 class HomeController < ApplicationController
   def index; end
 

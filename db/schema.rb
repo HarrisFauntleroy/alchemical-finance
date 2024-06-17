@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,44 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_616_060_407) do
-  create_table 'accounts', force: :cascade do |t|
-    t.string 'name'
-    t.decimal 'balance'
-    t.string 'currency'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema[7.1].define(version: 2024_06_17_135205) do
+  create_table "accounts", force: :cascade do |t|
+    t.string "name"
+    t.decimal "balance"
+    t.string "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'budgets', force: :cascade do |t|
-    t.string 'name'
-    t.decimal 'amount'
-    t.date 'start_date'
-    t.date 'end_date'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "budgets", force: :cascade do |t|
+    t.string "name"
+    t.decimal "amount"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "category"
+    t.string "currency"
+    t.string "frequency"
   end
 
-  create_table 'transactions', force: :cascade do |t|
-    t.integer 'account_id', null: false
-    t.decimal 'amount'
-    t.datetime 'timestamp'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['account_id'], name: 'index_transactions_on_account_id'
+  create_table "transactions", force: :cascade do |t|
+    t.integer "account_id", null: false
+    t.decimal "amount"
+    t.datetime "timestamp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_transactions_on_account_id"
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'email', default: '', null: false
-    t.string 'encrypted_password', default: '', null: false
-    t.string 'reset_password_token'
-    t.datetime 'reset_password_sent_at'
-    t.datetime 'remember_created_at'
-    t.string 'username'
-    t.index ['email'], name: 'index_users_on_email', unique: true
-    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
-    t.index ['username'], name: 'index_users_on_username', unique: true
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "username"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key 'transactions', 'accounts'
+  add_foreign_key "transactions", "accounts"
 end

@@ -8,7 +8,7 @@
 
       <div class="border-t border-gray-200 pt-4">
         <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full px-3 mb-6 md:mb-0">
+          <div class="w-full px-3 mb-6">
             <label
               class="
                 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
@@ -28,7 +28,8 @@
               <%= @budget.name %>
             </p>
           </div>
-          <div class="w-full px-3">
+
+          <div class="w-full px-3 mb-6">
             <label
               class="
                 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
@@ -48,11 +49,116 @@
               <%= number_to_currency(@budget.amount) %>
             </p>
           </div>
+
+          <div class="w-full px-3 mb-6">
+            <label
+              class="
+                block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
+              "
+              for="grid-category"
+            >
+              Category
+            </label>
+            <p
+              class="
+                appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200
+                rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+                focus:border-gray-500
+              "
+              id="grid-category"
+            >
+              <%= @budget.category %>
+            </p>
+          </div>
+
+          <div class="w-full px-3 mb-6">
+            <label
+              class="
+                block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
+              "
+              for="grid-currency"
+            >
+              Currency
+            </label>
+            <p
+              class="
+                appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200
+                rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+                focus:border-gray-500
+              "
+              id="grid-currency"
+            >
+              <%= @budget.currency %>
+            </p>
+          </div>
+
+          <div class="w-full px-3 mb-6">
+            <label
+              class="
+                block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
+              "
+              for="grid-frequency"
+            >
+              Frequency
+            </label>
+            <p
+              class="
+                appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200
+                rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+                focus:border-gray-500
+              "
+              id="grid-frequency"
+            >
+              <%= @budget.frequency %>
+            </p>
+          </div>
+
+          <div class="w-full px-3 mb-6">
+            <label
+              class="
+                block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
+              "
+              for="grid-start-date"
+            >
+              Start Date
+            </label>
+            <p
+              class="
+                appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200
+                rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+                focus:border-gray-500
+              "
+              id="grid-start-date"
+            >
+              <%= @budget.start_date %>
+            </p>
+          </div>
+
+          <div class="w-full px-3 mb-6">
+            <label
+              class="
+                block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2
+              "
+              for="grid-end-date"
+            >
+              End Date
+            </label>
+            <p
+              class="
+                appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200
+                rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white
+                focus:border-gray-500
+              "
+              id="grid-end-date"
+            >
+              <%= @budget.end_date %>
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="px-6 pt-4 pb-2">
+    <div class="px-6 pt-4 pb-2 flex justify-between">
       <%= link_to "Edit",
       edit_budget_path(@budget),
       class:
