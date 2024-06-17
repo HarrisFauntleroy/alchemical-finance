@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'home#index'
+  root 'pages#index'
 
   resources :budgets
   resources :accounts
