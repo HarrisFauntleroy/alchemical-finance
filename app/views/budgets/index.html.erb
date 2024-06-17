@@ -2,6 +2,8 @@
   <h1 class="text-2xl font-semibold">Budgets</h1>
 
   <div class="container mx-auto px-4 py-8">
+    <!-- New Budget Form -->
+    <%= render "form" %>
     <!-- New Budget Button -->
     <div class="text-right mb-4">
       <%= link_to "Add New Budget",
@@ -14,8 +16,8 @@
       <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
           <tr>
-            <th scope="col" class="py-3 px-6">Budget Name</th>
-            <th scope="col" class="py-3 px-6">Details</th>
+            <th scope="col" class="py-3 px-6">Name</th>
+            <th scope="col" class="py-3 px-6">Amount</th>
             <th scope="col" class="py-3 px-6">Actions</th>
           </tr>
         </thead>
@@ -27,12 +29,12 @@
               "
             >
               <td class="py-4 px-6"><%= budget.name %></td>
-              <td class="py-4 px-6"><%= budget.details %></td>
+              <td class="py-4 px-6"><%= budget.amount %></td>
               <td class="py-4 px-6 flex items-center">
                 <%= link_to edit_budget_path(budget), class: "text-blue-600 hover:text-blue-900 transition duration-300 ease-in-out" do %>
                   <i class="fas fa-edit mr-2"></i>Edit
                 <% end %>
-                <%= link_to budget, method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:text-red-900 ml-4 transition duration-300 ease-in-out" do %>
+                <%= button_to budget, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "text-red-600 hover:text-red-900 ml-4 transition duration-300 ease-in-out" do %>
                   <i class="fas fa-trash-alt mr-2"></i>Delete
                 <% end %>
               </td>

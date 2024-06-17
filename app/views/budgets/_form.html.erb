@@ -1,0 +1,23 @@
+<%= form_for(@budget, html: { id: 'new_budget', class: 'space-y-4' }) do |f| %>
+  <div class="mt-4">
+    <%= f.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :name,
+                 autofocus: true,
+                 class:
+                   "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+
+  <div class="mt-4">
+    <%= f.label :amount, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.number_field :amount,
+                   step: 0.01,
+                   class:
+                     "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+
+  <div class="mt-8">
+    <%= f.submit "Save Budget",
+             class:
+               "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+  </div>
+<% end %>
