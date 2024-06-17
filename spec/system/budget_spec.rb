@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Budgets management', type: :system, js: true do
+RSpec.describe 'Budgets management', :js, type: :system do
   let(:user) { create(:user) }
 
   before do

@@ -2,9 +2,8 @@
 
 require 'rails_helper'
 
-describe 'Users', type: :system, js: true do
-  it 'user signs up' do
-    user = build(:user)
+RSpec.describe 'Users', :js, type: :system do
+  def fill_sign_up_form(user)
     visit root_path
     click_link 'Sign up'
     fill_in 'user_email', with: user.email
@@ -12,36 +11,64 @@ describe 'Users', type: :system, js: true do
     fill_in 'user_password', with: user.password
     fill_in 'user_password_confirmation', with: user.password
     click_button 'Sign up'
-
-    expect(page).to have_current_path(root_path)
-    expect(page).to have_text('Sign out')
   end
 
-  it 'user logs in' do
-    user = create(:user)
+  def fill_sign_in_form(user)
     visit root_path
     click_link 'Sign in'
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Log in'
-
-    expect(page).to have_current_path(root_path)
-    expect(page).to have_text('Sign out')
   end
 
-  it 'user logs out' do
-    user = create(:user)
-    sign_in user
+  describe 'Sign up' do
+    let(:user) { build(:user) }
 
-    expect(page).to have_current_path(root_path)
-    click_button 'Sign out'
+    it 'redirects to root path after signing up' do
+      fill_sign_up_form(user)
+      expect(page).to have_current_path(root_path)
+    end
 
-    expect(page).to have_current_path(root_path)
-    expect(page).to have_text('Sign up')
-    expect(page).to have_text('Sign in')
+    it 'displays sign out text after signing up' do
+      fill_sign_up_form(user)
+      expect(page).to have_text('Sign out')
+    end
   end
 
-  it 'user resets password' do
-    # Not implemented
+  describe 'Sign in' do
+    let(:user) { create(:user) }
+
+    it 'redirects to root path after logging in' do
+      fill_sign_in_form(user)
+      expect(page).to have_current_path(root_path)
+    end
+
+    it 'displays sign out text after logging in' do
+      fill_sign_in_form(user)
+      expect(page).to have_text('Sign out')
+    end
+  end
+
+  describe 'Sign out' do
+    let(:user) { create(:user) }
+
+    before do
+      sign_in user
+    end
+
+    it 'redirects to root path after signing out' do
+      click_button 'Sign out'
+      expect(page).to have_current_path(root_path)
+    end
+
+    it 'displays sign up text after signing out' do
+      click_button 'Sign out'
+      expect(page).to have_text('Sign up')
+    end
+
+    it 'displays sign in text after signing out' do
+      click_button 'Sign out'
+      expect(page).to have_text('Sign in')
+    end
   end
 end
