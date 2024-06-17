@@ -39,3 +39,4 @@
 
 # Ignore cache files.
 .vscode/
+.byebug_history

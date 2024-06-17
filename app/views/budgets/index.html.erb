@@ -24,11 +24,12 @@
         <tbody>
           <% @budgets.each do |budget| %>
             <tr
+              id="budget_<%= budget.id %>"
               class="
                 bg-white border-b hover:bg-gray-100 transition duration-300 ease-in-out
               "
             >
-              <td class="py-4 px-6"><%= budget.name %></td>
+              <td class="py-4 px-6"><%= link_to budget.name, budget %></td>
               <td class="py-4 px-6"><%= budget.amount %></td>
               <td class="py-4 px-6 flex items-center">
                 <%= link_to edit_budget_path(budget), class: "text-blue-600 hover:text-blue-900 transition duration-300 ease-in-out" do %>
