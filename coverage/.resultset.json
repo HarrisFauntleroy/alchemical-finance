@@ -587,8 +587,8 @@
           1,
           1,
           1,
-          1,
-          1,
+          4,
+          4,
           null,
           null
         ]
@@ -612,9 +612,9 @@
           null,
           1,
           1,
-          4,
-          4,
-          4,
+          8,
+          8,
+          8,
           null,
           null
         ]
@@ -751,10 +751,10 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
+          5,
+          5,
+          5,
+          5,
           null,
           null,
           1,
@@ -811,6 +811,70 @@
           null
         ]
       },
+      "/Users/harrisfauntleroy/repos/finance-rails/spec/system/budget_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/harrisfauntleroy/repos/finance-rails/spec/system/users_spec.rb": {
         "lines": [
           null,
@@ -862,6 +926,14 @@
           null
         ]
       },
+      "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
       "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/home_controller.rb": {
         "lines": [
           null,
@@ -879,15 +951,61 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/application_controller.rb": {
+      "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/budgets_controller.rb": {
         "lines": [
           null,
           null,
           1,
+          1,
+          null,
+          1,
+          7,
+          7,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1718539376
+    "timestamp": 1718630003
   }
 }
