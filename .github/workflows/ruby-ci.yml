@@ -35,7 +35,7 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
     
       - name: Prepare
-        run: bin/rake spec:prepare
+        run: rake tailwindcss:build
 
       - name: Run RSpec
         run: COVERAGE=true bundle exec rspec  --require rails_helper
