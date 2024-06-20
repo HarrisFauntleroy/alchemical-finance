@@ -3,5 +3,8 @@
 class ApplicationController < ActionController::Base
   include Pundit::Authorization
 
-  before_action :authenticate_user!, only: %i[create edit update destroy]
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
+  before_action :authenticate_user!
 end
