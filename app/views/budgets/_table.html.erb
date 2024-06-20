@@ -1,0 +1,40 @@
+<%= render "pagination" %>
+<div class="overflow-x-auto relative shadow-lg rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+      <tr>
+        <th scope="col" class="py-3 px-6">Name</th>
+        <th scope="col" class="py-3 px-6">Amount</th>
+        <th scope="col" class="py-3 px-6">Category</th>
+        <th scope="col" class="py-3 px-6">Currency</th>
+        <th scope="col" class="py-3 px-6">Frequency</th>
+        <th scope="col" class="py-3 px-6">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @budgets.each do |budget| %>
+        <tr
+          id="budget_<%= budget.id %>"
+          class="
+            bg-white border-b hover:bg-gray-100 transition duration-300 ease-in-out
+          "
+        >
+          <td class="py-4 px-6"><%= link_to budget.name, budget_path(budget) %></td>
+          <td class="py-4 px-6"><%= budget.amount %></td>
+          <td class="py-4 px-6"><%= budget.category %></td>
+          <td class="py-4 px-6"><%= budget.currency %></td>
+          <td class="py-4 px-6"><%= budget.frequency %></td>
+          <td class="py-4 px-6 flex items-center gap-2">
+            <%= link_to edit_budget_path(budget), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 rounded transition duration-300 ease-in-out" do %>
+              <i class="fas fa-edit mr-2"></i>Edit
+            <% end %>
+            <%= button_to budget, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "bg-red-500 hover:bg-red-700 text-white font-bold px-4 rounded transition duration-300 ease-in-out" do %>
+              <i class="fas fa-trash-alt mr-2"></i>Delete
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= render "pagination" %>
