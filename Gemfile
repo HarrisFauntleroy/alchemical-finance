@@ -83,6 +83,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'brakeman'
+  gem 'hotwire-livereload', '~> 1.4'
   gem 'i18n-tasks', '~> 1.0.13'
 end
 
@@ -106,6 +107,4 @@ gem 'view_component', '~> 3.12'
 gem 'bootstrap'
 gem 'sassc-rails'
 
-gem 'kaminari'
-
-gem 'hotwire-livereload', '~> 1.4', group: :development
+gem 'pagy', '~> 8.4'
