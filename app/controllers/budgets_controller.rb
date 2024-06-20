@@ -1,27 +1,33 @@
 # frozen_string_literal: true
 
 class BudgetsController < ApplicationController
+  include Pagy::Backend
+
+  before_action :authenticate_user!
   before_action :set_budget, only: %i[show edit update destroy]
 
   def index
-    @budget = Budget.new # Temporary
-    @budgets = Budget.all
+    @budget = Budget.new
+    @pagy, @budgets = pagy(Budget.order(created_at: :desc))
+    respond_to do |format|
+      format.html
+    end
   end
 
   def show; end
 
   def new
-    @budget = Budget.new
+    @budget = Budget.new(user: current_user)
   end
 
   def edit; end
 
   def create
-    @budget = Budget.new(budget_params)
+    @budget = current_user.budgets.new(budget_params)
     if @budget.save
       redirect_to budgets_path, notice: 'Budget was successfully created.'
     else
-      render :index, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +35,7 @@ class BudgetsController < ApplicationController
     if @budget.update(budget_params)
       redirect_to budgets_path, notice: 'Budget was successfully updated.'
     else
-      render :index, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
