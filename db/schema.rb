@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_17_135205) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_20_130502) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_135205) do
     t.string "category"
     t.string "currency"
     t.string "frequency"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_budgets_on_user_id"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -54,5 +56,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_135205) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "budgets", "users"
   add_foreign_key "transactions", "accounts"
 end
