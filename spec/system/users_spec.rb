@@ -2,39 +2,17 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Users', :js do
-  def fill_sign_up_form(user)
-    visit root_path
-    click_on 'Sign up'
-    within('#new_user') do
-      fill_in 'user_email', with: user.email
-      fill_in 'user_username', with: user.username
-      fill_in 'user_password', with: user.password
-      fill_in 'user_password_confirmation', with: user.password
-      click_on 'Sign up'
-    end
-  end
-
-  def fill_sign_in_form(user)
-    visit root_path
-    click_on 'Sign in'
-    within('#new_user') do
-      fill_in 'user_email', with: user.email
-      fill_in 'user_password', with: user.password
-      click_on 'Sign in'
-    end
-  end
-
+describe 'Users', :js, type: :system do
   describe 'Sign up' do
     let(:user) { build(:user) }
 
     it 'redirects to root path after signing up' do
-      fill_sign_up_form(user)
+      sign_up(user)
       expect(page).to have_current_path(root_path)
     end
 
     it 'displays sign out text after signing up' do
-      fill_sign_up_form(user)
+      sign_up(user)
       expect(page).to have_text('Sign out')
     end
   end
@@ -43,12 +21,17 @@ RSpec.describe 'Users', :js do
     let(:user) { create(:user) }
 
     it 'redirects to root path after logging in' do
-      fill_sign_in_form(user)
+      sign_in user
       expect(page).to have_current_path(root_path)
     end
 
+    it 'displays welcome text after logging in' do
+      sign_in user
+      expect(page).to have_text("Welcome #{user.email}!")
+    end
+
     it 'displays sign out text after logging in' do
-      fill_sign_in_form(user)
+      sign_in user
       expect(page).to have_text('Sign out')
     end
   end
