@@ -67,6 +67,9 @@ RSpec.configure do |config|
   # Include authentication helpers for system tests
   config.include AuthenticationHelpers, type: :system
 
+  # Include Rails application routes
+  config.include Rails.application.routes.url_helpers
+
   config.before(:each, type: :system) do
     driven_by :rack_test
   end
