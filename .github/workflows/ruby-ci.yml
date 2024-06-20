@@ -34,8 +34,8 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
     
-      - name: Build TailwindCSS assets
-        run: bundle exec rake tailwindcss:build
+      - name: Precompile assets
+        run: bundle exec rake assets:precompile
 
       - name: Run RSpec
         run: COVERAGE=true bundle exec rspec  --require rails_helper
