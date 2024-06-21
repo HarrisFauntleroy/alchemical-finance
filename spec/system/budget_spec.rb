@@ -18,7 +18,7 @@ describe 'Budgets', :js, type: :system do
       end
 
       click_link_or_button 'Add New Budget'
-      
+
       within '#new_budget' do
         fill_in 'Name', with: 'Test Budget'
         fill_in 'Amount', with: 1000
@@ -54,34 +54,40 @@ describe 'Budgets', :js, type: :system do
     end
   end
 
-  # describe 'viewing a budget' do
-  #   let(:user) { create(:user) }
-  #   let(:budget) { create(:budget, user:) }
+  describe 'viewing a budget' do
+    let(:user) { create(:user) }
+    let(:budget) { create(:budget, user:) }
 
-  #   before do
-  #     sign_in user
-  #     click_on 'Budgets'
-  #     click_link budget.name
-  #   end
+    before do
+      sign_in user
 
-  #   it 'displays the budget name' do
-  #     expect(page).to have_content(budget.name)
-  #   end
+      within '#navigation' do
+        click_link_or_button 'Budgets'
+      end
 
-  #   it 'displays the budget amount' do
-  #     expect(page).to have_content(budget.amount)
-  #   end
+      within "#budget_#{budget.id}" do
+        click_link budget.name
+      end
+    end
 
-  #   it 'displays the budget category' do
-  #     expect(page).to have_content(budget.category)
-  #   end
+    it 'displays the budget name' do
+      expect(page).to have_content(budget.name)
+    end
 
-  #   it 'displays the budget currency' do
-  #     expect(page).to have_content(budget.currency)
-  #   end
+    it 'displays the budget amount' do
+      expect(page).to have_content(budget.amount)
+    end
 
-  #   it 'displays the budget frequency' do
-  #     expect(page).to have_content(budget.frequency)
-  #   end
-  # end
+    it 'displays the budget category' do
+      expect(page).to have_content(budget.category)
+    end
+
+    it 'displays the budget currency' do
+      expect(page).to have_content(budget.currency)
+    end
+
+    it 'displays the budget frequency' do
+      expect(page).to have_content(budget.frequency)
+    end
+  end
 end
