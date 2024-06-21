@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-06-21T20:47:28+10:00">2024-06-21T20:47:28+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-06-21T21:53:49+10:00">2024-06-21T21:53:49+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  96.1%
+  96.8%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.47
+         4.1
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>282</b> relevant lines,
-    <span class="green"><b>271</b> lines covered</span> and
+    <b>344</b> relevant lines,
+    <span class="green"><b>333</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed. </span>
     (<span class="green">
-  96.1%
+  96.8%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5a53999cd5edcfee809587e80187f02721ad62e0" class="src_link" title="app/controllers/budgets_controller.rb">app/controllers/budgets_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
-            <td class="cell--number">56</td>
-            <td class="cell--number">30</td>
-            <td class="cell--number">24</td>
+            <td class="yellow strong cell--number t-file__coverage">82.35 %</td>
+            <td class="cell--number">63</td>
+            <td class="cell--number">34</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">6</td>
-            <td class="cell--number">3.90</td>
+            <td class="cell--number">7.71</td>
             
           </tr>
         
@@ -327,8 +327,8 @@
             <td class="strong t-file__name"><a href="#38620acdac3ed36ec05f0660efb62f91565fb9ca" class="src_link" title="config/initializers/pagy.rb">config/initializers/pagy.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">209</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">2</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -374,7 +374,7 @@
             <td class="cell--number">10</td>
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.50</td>
+            <td class="cell--number">30.20</td>
             
           </tr>
         
@@ -396,7 +396,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">12.40</td>
+            <td class="cell--number">20.20</td>
             
           </tr>
         
@@ -429,18 +429,18 @@
             <td class="cell--number">26</td>
             <td class="cell--number">23</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">6.27</td>
+            <td class="cell--number">10.27</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2a2cedf08b198e4cdac59dcf2448da95e107d071" class="src_link" title="spec/system/budget_spec.rb">spec/system/budget_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">93</td>
-            <td class="cell--number">47</td>
-            <td class="cell--number">47</td>
+            <td class="cell--number">203</td>
+            <td class="cell--number">104</td>
+            <td class="cell--number">104</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.94</td>
+            <td class="cell--number">2.95</td>
             
           </tr>
         
@@ -617,8 +617,8 @@
   <div class="header">
     <h3>app/controllers/budgets_controller.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="yellow">
+  82.35%
 </span>
 
       lines covered
@@ -627,8 +627,8 @@
     
 
     <div class="t-line-summary">
-      <b>30</b> relevant lines.
-      <span class="green"><b>24</b> lines covered</span> and
+      <b>34</b> relevant lines.
+      <span class="green"><b>28</b> lines covered</span> and
       <span class="red"><b>6</b> lines missed.</span>
     </div>
 
@@ -739,8 +739,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="10">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="42" data-linenumber="10">
+            <span class="hits">42</span>
             
 
             
@@ -750,19 +750,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="11">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="42" data-linenumber="11">
+            <span class="hits">42</span>
             
 
             
 
-            <code class="ruby">    @pagy, @budgets = pagy(Budget.order(created_at: :desc))</code>
+            <code class="ruby">    @pagy, @budgets = pagy(current_user.budgets.order(created_at: :desc))</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="12">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="42" data-linenumber="12">
+            <span class="hits">42</span>
             
 
             
@@ -772,8 +772,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="13">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="42" data-linenumber="13">
+            <span class="hits">42</span>
             
 
             
@@ -855,7 +855,7 @@
 
             
 
-            <code class="ruby">    @budget = Budget.new(user: current_user)</code>
+            <code class="ruby">    @budget = current_user.budgets.new(user: current_user)</code>
           </li>
         </div>
       
@@ -926,13 +926,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="27">
-            <span class="hits">6</span>
+          <li class="never" data-hits="" data-linenumber="27">
+            
             
 
             
 
-            <code class="ruby">    if @budget.save</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -943,12 +943,23 @@
 
             
 
-            <code class="ruby">      redirect_to budgets_path, notice: &#39;Budget was successfully created.&#39;</code>
+            <code class="ruby">    if @budget.save</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="covered" data-hits="6" data-linenumber="29">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to budgets_path, notice: I18n.t(&#39;flash.budgets.create.success&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -959,7 +970,18 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="30">
+          <li class="missed" data-hits="0" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:alert] = I18n.t(&#39;flash.budgets.create.failure&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="32">
             
             
 
@@ -970,7 +992,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -981,7 +1003,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -992,7 +1014,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -1003,7 +1025,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
+          <li class="covered" data-hits="1" data-linenumber="36">
             <span class="hits">1</span>
             
 
@@ -1014,8 +1036,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="35">
-            
+          <li class="covered" data-hits="6" data-linenumber="37">
+            <span class="hits">6</span>
             
 
             
@@ -1025,35 +1047,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">      redirect_to budgets_path, notice: &#39;Budget was successfully updated.&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
+          <li class="covered" data-hits="6" data-linenumber="38">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby">      render :edit, status: :unprocessable_entity</code>
+            <code class="ruby">      redirect_to budgets_path, notice: I18n.t(&#39;flash.budgets.update.success&#39;)</code>
           </li>
         </div>
       
@@ -1064,12 +1064,45 @@
 
             
 
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:alert] = I18n.t(&#39;flash.budgets.update.failure&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby">      render :edit, status: :unprocessable_entity</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -1080,7 +1113,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -1091,7 +1124,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
@@ -1102,57 +1135,24 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="43">
-            
-            
-
+          <li class="covered" data-hits="5" data-linenumber="46">
+            <span class="hits">5</span>
             
 
-            <code class="ruby">    @budget.destroy</code>
+            
+
+            <code class="ruby">    if @budget.destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">    redirect_to budgets_path, notice: &#39;Budget was successfully destroyed.&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
+          <li class="covered" data-hits="5" data-linenumber="47">
+            <span class="hits">5</span>
             
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
+            <code class="ruby">      redirect_to budgets_path, notice: I18n.t(&#39;flash.budgets.destroy.success&#39;)</code>
           </li>
         </div>
       
@@ -1163,29 +1163,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    else</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="49">
+            
             
 
             
 
-            <code class="ruby">  def set_budget</code>
+            <code class="ruby">      flash[:alert] = I18n.t(&#39;flash.budgets.destroy.failure&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="50">
-            <span class="hits">5</span>
+          <li class="missed" data-hits="0" data-linenumber="50">
+            
             
 
             
 
-            <code class="ruby">    @budget = Budget.find(params[:id])</code>
+            <code class="ruby">      render :index, status: :unprocessable_entity</code>
           </li>
         </div>
       
@@ -1196,7 +1196,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1207,29 +1207,29 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def budget_params</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="54">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    params.require(:budget).permit(:name, :amount, :category, :currency, :frequency)</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
@@ -1240,12 +1240,89 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def set_budget</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="22" data-linenumber="57">
+            <span class="hits">22</span>
+            
+
+            
+
+            <code class="ruby">    @budget = Budget.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def budget_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="12" data-linenumber="61">
+            <span class="hits">12</span>
+            
+
+            
+
+            <code class="ruby">    params.require(:budget).permit(:name, :amount, :category, :currency, :frequency)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="63">
             
             
 
@@ -8646,8 +8723,8 @@
     
 
     <div class="t-line-summary">
-      <b>1</b> relevant lines.
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>2</b> relevant lines.
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -8780,13 +8857,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"># Pagy::DEFAULT[:items]       = 20                    # default</code>
+            
+
+            <code class="ruby">Pagy::DEFAULT[:items] = 10 # default</code>
           </li>
         </div>
       
@@ -11511,8 +11588,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="5">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="17" data-linenumber="5">
+            <span class="hits">17</span>
             
 
             
@@ -11555,8 +11632,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="9">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="47" data-linenumber="9">
+            <span class="hits">47</span>
             
 
             
@@ -11566,8 +11643,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="10">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="47" data-linenumber="10">
+            <span class="hits">47</span>
             
 
             
@@ -11577,8 +11654,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="11">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="47" data-linenumber="11">
+            <span class="hits">47</span>
             
 
             
@@ -11588,8 +11665,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="12">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="47" data-linenumber="12">
+            <span class="hits">47</span>
             
 
             
@@ -11610,8 +11687,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="14">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="47" data-linenumber="14">
+            <span class="hits">47</span>
             
 
             
@@ -11621,8 +11698,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="15">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="47" data-linenumber="15">
+            <span class="hits">47</span>
             
 
             
@@ -11859,8 +11936,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="5">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="33" data-linenumber="5">
+            <span class="hits">33</span>
             
 
             
@@ -11870,8 +11947,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="6">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="33" data-linenumber="6">
+            <span class="hits">33</span>
             
 
             
@@ -11881,8 +11958,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="7">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="33" data-linenumber="7">
+            <span class="hits">33</span>
             
 
             
@@ -12326,8 +12403,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="16">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="30" data-linenumber="16">
+            <span class="hits">30</span>
             
 
             
@@ -12337,8 +12414,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="17">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="30" data-linenumber="17">
+            <span class="hits">30</span>
             
 
             
@@ -12348,8 +12425,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="18">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="30" data-linenumber="18">
+            <span class="hits">30</span>
             
 
             
@@ -12359,8 +12436,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="19">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="30" data-linenumber="19">
+            <span class="hits">30</span>
             
 
             
@@ -12370,8 +12447,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="20">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="30" data-linenumber="20">
+            <span class="hits">30</span>
             
 
             
@@ -12568,8 +12645,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="38">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="30" data-linenumber="38">
+            <span class="hits">30</span>
             
 
             
@@ -12579,8 +12656,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="34" data-linenumber="39">
-            <span class="hits">34</span>
+          <li class="covered" data-hits="60" data-linenumber="39">
+            <span class="hits">60</span>
             
 
             
@@ -12630,8 +12707,8 @@
     
 
     <div class="t-line-summary">
-      <b>47</b> relevant lines.
-      <span class="green"><b>47</b> lines covered</span> and
+      <b>104</b> relevant lines.
+      <span class="green"><b>104</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -12698,13 +12775,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="25" data-linenumber="6">
+            <span class="hits">25</span>
             
 
-            <code class="ruby">  # before do</code>
+            
+
+            <code class="ruby">  let(:user) { create(:user) }</code>
           </li>
         </div>
       
@@ -12715,34 +12792,12 @@
 
             
 
-            <code class="ruby">  #   driven_by(:selenium_chrome)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">  # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="8">
             <span class="hits">1</span>
             
 
@@ -12753,29 +12808,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="11">
-            <span class="hits">7</span>
-            
-
-            
-
-            <code class="ruby">    let(:user) { create(:user) }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
@@ -12786,13 +12819,57 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="14">
+          <li class="covered" data-hits="6" data-linenumber="10">
             <span class="hits">6</span>
             
 
             
 
             <code class="ruby">      sign_in user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="12">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      within &#39;#navigation&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="13">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        click_link_or_button &#39;Budgets&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -12814,34 +12891,12 @@
 
             
 
-            <code class="ruby">      within &#39;#navigation&#39; do</code>
+            <code class="ruby">      click_link &#39;Add New Budget&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="17">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">        click_link_or_button &#39;Budgets&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -12852,29 +12907,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="20">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">      click_link_or_button &#39;Add New Budget&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="22">
+          <li class="covered" data-hits="6" data-linenumber="18">
             <span class="hits">6</span>
             
 
@@ -12885,7 +12918,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="23">
+          <li class="covered" data-hits="6" data-linenumber="19">
             <span class="hits">6</span>
             
 
@@ -12896,7 +12929,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="24">
+          <li class="covered" data-hits="6" data-linenumber="20">
             <span class="hits">6</span>
             
 
@@ -12907,7 +12940,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="25">
+          <li class="covered" data-hits="6" data-linenumber="21">
             <span class="hits">6</span>
             
 
@@ -12918,7 +12951,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="26">
+          <li class="covered" data-hits="6" data-linenumber="22">
             <span class="hits">6</span>
             
 
@@ -12929,7 +12962,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="27">
+          <li class="covered" data-hits="6" data-linenumber="23">
             <span class="hits">6</span>
             
 
@@ -12940,7 +12973,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="28">
+          <li class="covered" data-hits="6" data-linenumber="24">
             <span class="hits">6</span>
             
 
@@ -12951,13 +12984,57 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
             
 
             <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;shows success message after creating a new budget&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Budget was successfully created.&#39;)</code>
           </li>
         </div>
       
@@ -12990,7 +13067,7 @@
 
             
 
-            <code class="ruby">    it &#39;shows success message after creating a new budget&#39; do</code>
+            <code class="ruby">    it &#39;displays the new budget name&#39; do</code>
           </li>
         </div>
       
@@ -13001,7 +13078,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&#39;Budget was successfully created.&#39;)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;Test Budget&#39;)</code>
           </li>
         </div>
       
@@ -13034,7 +13111,7 @@
 
             
 
-            <code class="ruby">    it &#39;displays the new budget name&#39; do</code>
+            <code class="ruby">    it &#39;displays the new budget amount&#39; do</code>
           </li>
         </div>
       
@@ -13045,7 +13122,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&#39;Test Budget&#39;)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;1000&#39;)</code>
           </li>
         </div>
       
@@ -13078,7 +13155,7 @@
 
             
 
-            <code class="ruby">    it &#39;displays the new budget amount&#39; do</code>
+            <code class="ruby">    it &#39;displays the new budget category&#39; do</code>
           </li>
         </div>
       
@@ -13089,7 +13166,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&#39;1000&#39;)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;Test Category&#39;)</code>
           </li>
         </div>
       
@@ -13122,7 +13199,7 @@
 
             
 
-            <code class="ruby">    it &#39;displays the new budget category&#39; do</code>
+            <code class="ruby">    it &#39;displays the new budget currency&#39; do</code>
           </li>
         </div>
       
@@ -13133,7 +13210,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&#39;Test Category&#39;)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;USD&#39;)</code>
           </li>
         </div>
       
@@ -13166,7 +13243,7 @@
 
             
 
-            <code class="ruby">    it &#39;displays the new budget currency&#39; do</code>
+            <code class="ruby">    it &#39;displays the new budget frequency&#39; do</code>
           </li>
         </div>
       
@@ -13177,7 +13254,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&#39;USD&#39;)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;Monthly&#39;)</code>
           </li>
         </div>
       
@@ -13199,18 +13276,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="52">
+            
             
 
             
 
-            <code class="ruby">    it &#39;displays the new budget frequency&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -13221,67 +13298,12 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&#39;Monthly&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="54">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="55">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="56">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">  describe &#39;viewing a budget&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="58">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    let(:user) { create(:user) }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="59">
+          <li class="covered" data-hits="6" data-linenumber="54">
             <span class="hits">6</span>
             
 
@@ -13292,7 +13314,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -13303,7 +13325,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
+          <li class="covered" data-hits="1" data-linenumber="56">
             <span class="hits">1</span>
             
 
@@ -13314,7 +13336,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="62">
+          <li class="covered" data-hits="5" data-linenumber="57">
             <span class="hits">5</span>
             
 
@@ -13325,7 +13347,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
+          <li class="never" data-hits="" data-linenumber="58">
             
             
 
@@ -13336,7 +13358,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="64">
+          <li class="covered" data-hits="5" data-linenumber="59">
             <span class="hits">5</span>
             
 
@@ -13347,7 +13369,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="65">
+          <li class="covered" data-hits="5" data-linenumber="60">
             <span class="hits">5</span>
             
 
@@ -13358,13 +13380,68 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
             
 
             <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="63">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">      within &quot;#budget_#{budget.id}&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="64">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">        click_link budget.name</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -13380,62 +13457,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="68">
-            <span class="hits">5</span>
-            
-
-            
-
-            <code class="ruby">      within &quot;#budget_#{budget.id}&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="5" data-linenumber="69">
-            <span class="hits">5</span>
-            
-
-            
-
-            <code class="ruby">        click_link budget.name</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="71">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="72">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="73">
+          <li class="covered" data-hits="1" data-linenumber="68">
             <span class="hits">1</span>
             
 
@@ -13446,7 +13468,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="74">
+          <li class="covered" data-hits="1" data-linenumber="69">
             <span class="hits">1</span>
             
 
@@ -13457,7 +13479,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="75">
+          <li class="never" data-hits="" data-linenumber="70">
             
             
 
@@ -13468,7 +13490,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="76">
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
@@ -13479,7 +13501,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="77">
+          <li class="covered" data-hits="1" data-linenumber="72">
             <span class="hits">1</span>
             
 
@@ -13490,7 +13512,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="78">
+          <li class="covered" data-hits="1" data-linenumber="73">
             <span class="hits">1</span>
             
 
@@ -13501,7 +13523,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="79">
+          <li class="never" data-hits="" data-linenumber="74">
             
             
 
@@ -13512,7 +13534,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="80">
+          <li class="never" data-hits="" data-linenumber="75">
             
             
 
@@ -13523,7 +13545,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="81">
+          <li class="covered" data-hits="1" data-linenumber="76">
             <span class="hits">1</span>
             
 
@@ -13534,7 +13556,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="82">
+          <li class="covered" data-hits="1" data-linenumber="77">
             <span class="hits">1</span>
             
 
@@ -13545,7 +13567,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="83">
+          <li class="never" data-hits="" data-linenumber="78">
             
             
 
@@ -13556,7 +13578,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="84">
+          <li class="never" data-hits="" data-linenumber="79">
             
             
 
@@ -13567,7 +13589,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="85">
+          <li class="covered" data-hits="1" data-linenumber="80">
             <span class="hits">1</span>
             
 
@@ -13578,7 +13600,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="86">
+          <li class="covered" data-hits="1" data-linenumber="81">
             <span class="hits">1</span>
             
 
@@ -13589,13 +13611,68 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="87">
+          <li class="never" data-hits="" data-linenumber="82">
             
             
 
             
 
             <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="83">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="84">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays the budget frequency&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="85">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(budget.frequency)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="86">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="87">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -13617,18 +13694,18 @@
 
             
 
-            <code class="ruby">    it &#39;displays the budget frequency&#39; do</code>
+            <code class="ruby">  describe &#39;editing a budget&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="90">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="7" data-linenumber="90">
+            <span class="hits">7</span>
             
 
             
 
-            <code class="ruby">      expect(page).to have_content(budget.frequency)</code>
+            <code class="ruby">    let(:budget) { create(:budget, user:) }</code>
           </li>
         </div>
       
@@ -13639,12 +13716,496 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="92">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    before do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="93">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      sign_in user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="94">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="95">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      within &#39;#navigation&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="96">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        click_link_or_button &#39;Budgets&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="97">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="98">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="99">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      within &quot;#budget_#{budget.id}&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="100">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        click_link &#39;Edit&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="102">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="103">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      within &#39;#new_budget&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="104">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        fill_in &#39;Name&#39;, with: &#39;Updated Budget&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="105">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        fill_in &#39;Amount&#39;, with: 2000</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="106">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        fill_in &#39;Category&#39;, with: &#39;Updated Category&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="107">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        fill_in &#39;Currency&#39;, with: &#39;USD&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="108">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        fill_in &#39;Frequency&#39;, with: &#39;Weekly&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="109">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        click_link_or_button &#39;Save Budget&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="110">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="111">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="92">
+          <li class="never" data-hits="" data-linenumber="112">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="113">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;shows success message after editing a budget&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="114">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Budget was successfully updated.&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="115">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="116">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="117">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays the updated budget name&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="118">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Updated Budget&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="119">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="120">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="121">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays the updated budget amount&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="122">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;2000&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="123">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="124">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="125">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays the updated budget category&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="126">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Updated Category&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="127">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="128">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="129">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays the updated budget currency&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="130">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;USD&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="131">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="132">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="133">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays the updated budget frequency&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="134">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Weekly&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="135">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="136">
             
             
 
@@ -13655,7 +14216,733 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="93">
+          <li class="never" data-hits="" data-linenumber="137">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="138">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;deleting a budget&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="139">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">    let(:budget) { create(:budget, user:) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="140">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="141">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    before do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="142">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">      sign_in user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="143">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="144">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">      within &#39;#navigation&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="145">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">        click_link_or_button &#39;Budgets&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="146">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="147">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="148">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">      within &quot;#budget_#{budget.id}&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="149">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">        accept_confirm do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="150">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">          click_button &#39;Delete&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="151">
+            
+            
+
+            
+
+            <code class="ruby">        end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="152">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="153">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="154">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="155">
+            
+            
+
+            
+
+            <code class="ruby">    # Not working</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="156">
+            
+            
+
+            
+
+            <code class="ruby">    # it &#39;shows success message after deleting a budget&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="157">
+            
+            
+
+            
+
+            <code class="ruby">    #   expect(page).to have_content(&#39;Budget was successfully deleted.&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="158">
+            
+            
+
+            
+
+            <code class="ruby">    # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="159">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="160">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;does not display the deleted budget name&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="161">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).not_to have_content(budget.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="162">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="163">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="164">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;does not display the deleted budget amount&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="165">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).not_to have_content(budget.amount)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="166">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="167">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="168">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;does not display the deleted budget category&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="169">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).not_to have_content(budget.category)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="170">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="171">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="172">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;does not display the deleted budget currency&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="173">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).not_to have_content(budget.currency)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="174">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="175">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="176">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;does not display the deleted budget frequency&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="177">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).not_to have_content(budget.frequency)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="178">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="179">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="180">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="181">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;paginating budgets&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="182">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    before do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="183">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      create_list(:budget, 15, user:, name: &#39;Test Budget&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="184">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      sign_in user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="185">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="186">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      within &#39;#navigation&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="187">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        click_link_or_button &#39;Budgets&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="188">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="189">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="190">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="191">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays 10 budgets on the first page&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="192">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Test Budget&#39;, count: 10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="193">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="194">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="195">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;displays 5 budgets on the second page&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="196">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      within &#39;#pagination&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="197">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        first(&#39;a&#39;, text: &#39;&gt;&#39;).click</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="198">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="199">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="200">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&#39;Test Budget&#39;, count: 5)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="201">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="202">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="203">
             
             
 
