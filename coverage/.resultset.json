@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/harrisfauntleroy/repos/finance-rails/config/environment.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -12,7 +12,7 @@
           1
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/application.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/application.rb": {
         "lines": [
           null,
           null,
@@ -45,7 +45,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/boot.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -55,7 +55,7 @@
           1
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/environments/test.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -125,7 +125,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/assets.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -143,7 +143,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/bullet.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/bullet.rb": {
         "lines": [
           null,
           null,
@@ -163,7 +163,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/content_security_policy.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -174,359 +174,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/devise.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/inflections.rb": {
-        "lines": [
           null,
           null,
           null,
@@ -547,7 +194,360 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/pagy.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/devise.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/pagy.rb": {
         "lines": [
           null,
           null,
@@ -760,7 +760,7 @@
           1
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/initializers/permissions_policy.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -779,7 +779,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/factories/accounts.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/factories/accounts.rb": {
         "lines": [
           null,
           null,
@@ -792,7 +792,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/factories/budgets.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/factories/budgets.rb": {
         "lines": [
           null,
           null,
@@ -813,7 +813,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/factories/transactions.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/factories/transactions.rb": {
         "lines": [
           null,
           null,
@@ -826,7 +826,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/factories/user.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/factories/user.rb": {
         "lines": [
           null,
           null,
@@ -839,7 +839,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/config/routes.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/config/routes.rb": {
         "lines": [
           null,
           null,
@@ -854,7 +854,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/user.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/user.rb": {
         "lines": [
           null,
           null,
@@ -874,7 +874,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/application_record.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -883,7 +883,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/concerns/user_validations.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/concerns/user_validations.rb": {
         "lines": [
           null,
           null,
@@ -901,7 +901,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/concerns/user_relationships.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/concerns/user_relationships.rb": {
         "lines": [
           null,
           null,
@@ -917,7 +917,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/concerns/user_scopes.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/concerns/user_scopes.rb": {
         "lines": [
           null,
           null,
@@ -942,7 +942,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/helpers/application_helper.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -951,7 +951,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/helpers/pages_helper.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/helpers/pages_helper.rb": {
         "lines": [
           null,
           null,
@@ -959,7 +959,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/support/authentication_helpers.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/support/authentication_helpers.rb": {
         "lines": [
           null,
           null,
@@ -1004,7 +1004,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/account.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/account.rb": {
         "lines": [
           null,
           null,
@@ -1012,33 +1012,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/models/budget_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/budget.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/models/transaction_spec.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/models/budget_spec.rb": {
         "lines": [
           null,
           null,
@@ -1049,7 +1023,33 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/models/transaction.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/budget.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/models/transaction_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/models/transaction.rb": {
         "lines": [
           null,
           null,
@@ -1058,7 +1058,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/system/budget_spec.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/system/budget_spec.rb": {
         "lines": [
           null,
           null,
@@ -1144,7 +1144,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/spec/system/users_spec.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/spec/system/users_spec.rb": {
         "lines": [
           null,
           null,
@@ -1209,7 +1209,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/pages_controller.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/controllers/pages_controller.rb": {
         "lines": [
           null,
           null,
@@ -1218,7 +1218,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/application_controller.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -1232,7 +1232,7 @@
           null
         ]
       },
-      "/Users/harrisfauntleroy/repos/finance-rails/app/controllers/budgets_controller.rb": {
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/controllers/budgets_controller.rb": {
         "lines": [
           null,
           null,
@@ -1293,6 +1293,6 @@
         ]
       }
     },
-    "timestamp": 1718930947
+    "timestamp": 1718958726
   }
 }
