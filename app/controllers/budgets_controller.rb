@@ -28,8 +28,8 @@ class BudgetsController < ApplicationController
     if @budget.save
       redirect_to budgets_path, notice: I18n.t('flash.budgets.create.success')
     else
-      flash[:alert] = I18n.t('flash.budgets.create.failure')
-      render :new, status: :unprocessable_entity
+      flash[:error] = I18n.t('flash.budgets.create.failure')
+      render :new
     end
   end
 
@@ -37,7 +37,7 @@ class BudgetsController < ApplicationController
     if @budget.update(budget_params)
       redirect_to budgets_path, notice: I18n.t('flash.budgets.update.success')
     else
-      flash[:alert] = I18n.t('flash.budgets.update.failure')
+      flash[:error] = I18n.t('flash.budgets.update.failure')
       render :edit, status: :unprocessable_entity
     end
   end
@@ -46,7 +46,7 @@ class BudgetsController < ApplicationController
     if @budget.destroy
       redirect_to budgets_path, notice: I18n.t('flash.budgets.destroy.success')
     else
-      flash[:alert] = I18n.t('flash.budgets.destroy.failure')
+      flash[:error] = I18n.t('flash.budgets.destroy.failure')
       render :index, status: :unprocessable_entity
     end
   end
