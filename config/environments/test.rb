@@ -8,6 +8,9 @@ require 'active_support/core_ext/integer/time'
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
+  # Prevents sprockets from using sass mode and SassC gem (which is based on deprecated LibSass library).
+  config.assets.css_compressor = nil
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # While tests run files are not watched, reloading is not necessary.
