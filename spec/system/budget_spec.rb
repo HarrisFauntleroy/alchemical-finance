@@ -12,15 +12,20 @@ describe 'Budgets', :js, type: :system do
 
     before do
       sign_in user
-      click_on 'Budgets'
-      click_on 'Add New Budget'
+
+      within '#navigation' do
+        click_link_or_button 'Budgets'
+      end
+
+      click_link_or_button 'Add New Budget'
+      
       within '#new_budget' do
         fill_in 'Name', with: 'Test Budget'
         fill_in 'Amount', with: 1000
         fill_in 'Category', with: 'Test Category'
         fill_in 'Currency', with: 'USD'
         fill_in 'Frequency', with: 'Monthly'
-        click_on 'Save Budget'
+        click_link_or_button 'Save Budget'
       end
     end
 
