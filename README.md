@@ -24,28 +24,28 @@
 <!-- **Project Badges** -->
 <p align="center">
     <a href="https://github.com/rubocop/rubocop">
-        <img alt="GitHub release" src="https://img.shields.io/badge/code_style-rubocop-brightgreen.svg?&style=for-the-badge">
+        <img alt="GitHub release" src="https://img.shields.io/badge/code_style-rubocop-brightgreen.svg">
     </a>
     <a href="/coverage">
-        <img alt="GitHub release" src="/coverage/coverage.svg?&style=for-the-badge">
+        <img alt="GitHub release" src="/coverage/coverage.svg">
     </a>
     <a href="/LICENSE.md">
-        <img alt="GitHub" src="https://img.shields.io/github/license/HarrisFauntleroy/alchemical-finance?&style=for-the-badge">
+        <img alt="GitHub" src="https://img.shields.io/github/license/HarrisFauntleroy/alchemical-finance">
     </a>
     <a href="https://github.com/HarrisFauntleroy/alchemical-finance/graphs/contributors">
-        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/HarrisFauntleroy/alchemical-finance?&style=for-the-badge">
+        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/HarrisFauntleroy/alchemical-finance">
     </a>
     <a href="https://github.com/HarrisFauntleroy/alchemical-finance/actions">
-        <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/HarrisFauntleroy/alchemical-finance/main?&style=for-the-badge">
+        <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/HarrisFauntleroy/alchemical-finance/main">
     </a>
     <a href="https://github.com/HarrisFauntleroy/alchemical-finance/issues?q=is%3Aopen+is%3Aissue">
-        <img alt="GitHub issues" src="https://img.shields.io/github/issues/HarrisFauntleroy/alchemical-finance?&style=for-the-badge">
+        <img alt="GitHub issues" src="https://img.shields.io/github/issues/HarrisFauntleroy/alchemical-finance">
     </a>
     <a href="https://github.com/HarrisFauntleroy/alchemical-finance/issues?q=is%3Aopen+is%3Aissue">
-        <img alt="GitHub issues" src="https://img.shields.io/github/last-commit/HarrisFauntleroy/alchemical-finance?&style=for-the-badge">
+        <img alt="GitHub issues" src="https://img.shields.io/github/last-commit/HarrisFauntleroy/alchemical-finance">
     </a>
     <a href="https://github.com/HarrisFauntleroy/alchemical-finance/issues?q=is%3Aopen+is%3Aissue">
-        <img alt="GitHub issues" src="https://img.shields.io/github/commit-activity/w/HarrisFauntleroy/alchemical-finance?&style=for-the-badge">
+        <img alt="GitHub issues" src="https://img.shields.io/github/commit-activity/w/HarrisFauntleroy/alchemical-finance">
     </a>
 </p>
 
