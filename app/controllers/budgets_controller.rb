@@ -8,7 +8,7 @@ class BudgetsController < ApplicationController
 
   def index
     @budget = Budget.new
-    @pagy, @budgets = pagy(Budget.order(created_at: :desc))
+    @pagy, @budgets = pagy(current_user.budgets.order(created_at: :desc))
     respond_to do |format|
       format.html
     end
@@ -17,31 +17,38 @@ class BudgetsController < ApplicationController
   def show; end
 
   def new
-    @budget = Budget.new(user: current_user)
+    @budget = current_user.budgets.new(user: current_user)
   end
 
   def edit; end
 
   def create
     @budget = current_user.budgets.new(budget_params)
+
     if @budget.save
-      redirect_to budgets_path, notice: 'Budget was successfully created.'
+      redirect_to budgets_path, notice: I18n.t('flash.budgets.create.success')
     else
+      flash[:alert] = I18n.t('flash.budgets.create.failure')
       render :new, status: :unprocessable_entity
     end
   end
 
   def update
     if @budget.update(budget_params)
-      redirect_to budgets_path, notice: 'Budget was successfully updated.'
+      redirect_to budgets_path, notice: I18n.t('flash.budgets.update.success')
     else
+      flash[:alert] = I18n.t('flash.budgets.update.failure')
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @budget.destroy
-    redirect_to budgets_path, notice: 'Budget was successfully destroyed.'
+    if @budget.destroy
+      redirect_to budgets_path, notice: I18n.t('flash.budgets.destroy.success')
+    else
+      flash[:alert] = I18n.t('flash.budgets.destroy.failure')
+      render :index, status: :unprocessable_entity
+    end
   end
 
   private
