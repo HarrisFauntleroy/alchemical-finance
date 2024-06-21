@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="min-h-screen flex flex-1 flex-col">
   <head>
-    <title>FinanceRails</title>
+    <title>Alchemicl Finance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -20,7 +20,7 @@
       <p class="bg-red-100 text-red-800 px-4 py-2 rounded-md"><%= alert %></p>
     <% end %>
     <main class="flex flex-1 flex-col h-full">
-      <%= render "shared/navbar" %>
+      <%= render "shared/navigation" %>
       <%= yield %>
     </main>
   </body>
