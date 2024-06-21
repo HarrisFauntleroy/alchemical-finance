@@ -28,4 +28,14 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  flash:
+    budgets:
+      create:
+        success: "Budget was successfully created."
+        failure: "Budget was not created."
+      update:
+        success: "Budget was successfully updated."
+        failure: "Budget was not updated."
+      destroy:
+        success: "Budget was successfully deleted."
+        failure: "Budget was not deleted."
