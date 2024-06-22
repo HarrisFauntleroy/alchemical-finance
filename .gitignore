@@ -41,3 +41,4 @@
 # Ignore cache files.
 .vscode/
 .byebug_history
+db/seeds-dev.rb

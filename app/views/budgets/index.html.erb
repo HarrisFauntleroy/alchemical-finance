@@ -3,7 +3,7 @@
   <h1 class="text-2xl font-semibold">Budgets</h1>
 
   <div class="mx-auto px-4 py-8">
-    <%= form_with url: budgets_path, method: :get, local: true, class: "mb-4" do %>
+    <%= form_with url: budgets_path, method: :get, local: true, class: "flex flex-col gap-2 mb-4" do %>
       <label for="view" class="mr-2">View by:</label>
       <%= select_tag :view,
       options_for_select(
@@ -17,14 +17,16 @@
         ],
         params[:view],
       ),
-      onchange: "this.form.submit()" %>
+      onchange: "this.form.submit()",
+      class: "rounded",
+      style: "max-width: max-content;" %>
     <% end %>
 
-    <div class="flex flex-row gap-4">
-      <div class="flex flex-1 h-full w-1/2">
+    <div class="flex flex-row justify-center align-middle h-full gap-4">
+      <div class="flex-1">
         <%= render "category_distribution_details" %>
       </div>
-      <div class="flex flex-1 h-full w-1/2 p-2">
+      <div class="flex-1">
         <%= render "category_distribution" %>
       </div>
     </div>
