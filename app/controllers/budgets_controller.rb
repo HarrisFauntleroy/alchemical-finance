@@ -9,6 +9,9 @@ class BudgetsController < ApplicationController
   def index
     @budget = Budget.new
     @pagy, @budgets = pagy(current_user.budgets.order(created_at: :desc))
+    @view = params[:view] || 'monthly' # Default view to 'monthly'
+    @category_distribution = BudgetDistributionService.new(@budgets, @view).category_distribution
+
     respond_to do |format|
       format.html
     end
