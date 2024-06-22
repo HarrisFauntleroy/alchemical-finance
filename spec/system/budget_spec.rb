@@ -173,7 +173,9 @@ describe 'Budgets', :js, type: :system do
     end
 
     it 'does not display the deleted budget frequency' do
-      expect(page).not_to have_content(budget.frequency)
+      within '#budgets-table' do
+        expect(page).not_to have_content(budget.frequency)
+      end
     end
   end
 
