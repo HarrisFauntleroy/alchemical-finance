@@ -1,0 +1,24 @@
+<div class="mx-auto mt-4 text-center flex-1">
+  <h2 class="text-xl font-semibold">Income Distribution Details</h2>
+  <div class="bg-white shadow-md rounded-lg p-4 h-full">
+    <% @category_distribution.each do |category, amount| %>
+      <div class="flex justify-between py-2">
+        <span class="font-semibold"><%= category %></span>
+        <span><%= number_to_currency(amount, unit: "AUD $") %></span>
+      </div>
+    <% end %>
+    <hr class="my-4">
+    <div class="flex justify-between py-2">
+      <span class="font-semibold">Total</span>
+      <span><%= number_to_currency(@total_amount, unit: "AUD $") %></span>
+    </div>
+    <div class="flex justify-between py-2">
+      <span class="font-semibold">Income</span>
+      <span><%= number_to_currency(@income, unit: "AUD $") %></span>
+    </div>
+    <div class="flex justify-between py-2">
+      <span class="font-semibold">Remaining</span>
+      <span><%= number_to_currency(@remaining_amount, unit: "AUD $") %></span>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,37 @@
-<div class="container mx-auto mt-4">
+<div class="mx-auto mt-4">
+
   <h1 class="text-2xl font-semibold">Budgets</h1>
-  <div class="container mx-auto px-4 py-8">
-    <%= render "category_distribution" %>
-    <%= render "table" %>
+
+  <div class="mx-auto px-4 py-8">
+    <%= form_with url: budgets_path, method: :get, local: true, class: "mb-4" do %>
+      <label for="view" class="mr-2">View by:</label>
+      <%= select_tag :view,
+      options_for_select(
+        [
+          %w[Daily daily],
+          %w[Weekly weekly],
+          %w[Fortnightly fortnightly],
+          %w[Monthly monthly],
+          %w[Quarterly quarterly],
+          %w[Annually annually],
+        ],
+        params[:view],
+      ),
+      onchange: "this.form.submit()" %>
+    <% end %>
+
+    <div class="flex flex-row gap-4">
+      <div class="flex flex-1 h-full w-1/2">
+        <%= render "category_distribution_details" %>
+      </div>
+      <div class="flex flex-1 h-full w-1/2 p-2">
+        <%= render "category_distribution" %>
+      </div>
+    </div>
+
+    <turbo-frame id="budgets">
+      <%= render "table" %>
+    </turbo-frame>
+
   </div>
 </div>
