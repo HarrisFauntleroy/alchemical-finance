@@ -9,8 +9,11 @@ class BudgetsController < ApplicationController
   def index
     @budget = Budget.new
     @pagy, @budgets = pagy(current_user.budgets.order(created_at: :desc))
-    @view = params[:view] || 'monthly' # Default view to 'monthly'
+    @view = params[:view] || 'annually'
     @category_distribution = BudgetDistributionService.new(@budgets, @view).category_distribution
+    @total_amount = @category_distribution.values.sum
+    @income = 80_000 # TODO: Replace with actual income
+    @remaining_amount = @income - @total_amount
 
     respond_to do |format|
       format.html
