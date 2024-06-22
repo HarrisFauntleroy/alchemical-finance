@@ -1,6 +1,25 @@
 <div class="h-full">
   <div class="bg-white shadow-md rounded-lg p-4 h-full">
-    <h2 class="text-xl">Income Distribution Details</h2>
+    <div class="flex flex-row justify-between w-full">
+      <h2 class="text-xl font-semibold">Breakdown</h2>
+      <%= form_with url: budgets_path, method: :get, local: true, class: "flex flex-col gap-2 mb-4" do %>
+        <%= select_tag :view,
+        options_for_select(
+          [
+            %w[Daily daily],
+            %w[Weekly weekly],
+            %w[Fortnightly fortnightly],
+            %w[Monthly monthly],
+            %w[Quarterly quarterly],
+            %w[Annually annually],
+          ],
+          params[:view],
+        ),
+        onchange: "this.form.submit()",
+        class: "rounded",
+        style: "max-width: max-content;" %>
+      <% end %>
+    </div>
     <% @category_distribution.each do |category, amount| %>
       <div class="flex justify-between py-2">
         <span class="font-semibold"><%= category %></span>
