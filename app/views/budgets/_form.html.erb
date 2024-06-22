@@ -1,4 +1,20 @@
-<%= form_for(@budget, html: { id: 'new_budget', class: 'space-y-4' }) do |f| %>
+<%= form_with(model: @budget, local: true, html: { id: 'new_budget', class: 'space-y-4' }) do |f| %>
+  <% if @budget.errors.any? %>
+    <div
+      class="
+        bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4
+      "
+      role="alert"
+    >
+      <strong class="font-bold">Error(s):</strong>
+      <ul>
+        <% @budget.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="mt-4">
     <%= f.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
     <%= f.text_field :name,
@@ -33,10 +49,21 @@
 
   <div class="mt-4">
     <%= f.label :frequency, class: "block text-gray-700 text-sm font-bold mb-2" %>
-    <%= f.text_field :frequency,
-                 autofocus: true,
-                 class:
-                   "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    <%= f.select :frequency,
+             options_for_select(
+               [
+                 %w[Daily daily],
+                 %w[Weekly weekly],
+                 %w[Fortnightly fortnightly],
+                 %w[Monthly monthly],
+                 %w[Quarterly quarterly],
+                 %w[Annually annually],
+               ],
+               selected: @budget.frequency,
+             ),
+             {},
+             class:
+               "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
   <div class="mt-8">

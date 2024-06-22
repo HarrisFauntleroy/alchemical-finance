@@ -20,7 +20,7 @@ describe 'Budgets', :js, type: :system do
         fill_in 'Amount', with: 1000
         fill_in 'Category', with: 'Test Category'
         fill_in 'Currency', with: 'USD'
-        fill_in 'Frequency', with: 'Monthly'
+        select 'Monthly', from: 'Frequency'
         click_link_or_button 'Save Budget'
       end
     end
@@ -105,7 +105,7 @@ describe 'Budgets', :js, type: :system do
         fill_in 'Amount', with: 2000
         fill_in 'Category', with: 'Updated Category'
         fill_in 'Currency', with: 'USD'
-        fill_in 'Frequency', with: 'Weekly'
+        select 'Weekly', from: 'Frequency'
         click_link_or_button 'Save Budget'
       end
     end

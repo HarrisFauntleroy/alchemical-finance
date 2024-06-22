@@ -13,7 +13,7 @@
             %w[Quarterly quarterly],
             %w[Annually annually],
           ],
-          params[:view],
+          params[:view] || "annually",
         ),
         onchange: "this.form.submit()",
         class: "rounded",
