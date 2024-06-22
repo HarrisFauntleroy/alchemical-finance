@@ -152,10 +152,9 @@ describe 'Budgets', :js, type: :system do
       end
     end
 
-    # Not working
-    # it 'shows success message after deleting a budget' do
-    #   expect(page).to have_content('Budget was successfully deleted.')
-    # end
+    it 'shows success message after deleting a budget' do
+      expect(page).to have_content('Budget was successfully deleted.')
+    end
 
     it 'does not display the deleted budget name' do
       expect(page).not_to have_content(budget.name)
