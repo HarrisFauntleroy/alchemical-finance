@@ -106,3 +106,6 @@ gem 'bootstrap'
 gem 'sassc-rails'
 
 gem 'pagy', '~> 8.4'
+
+gem 'chartkick'
+gem 'groupdate'
