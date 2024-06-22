@@ -1376,10 +1376,6 @@
           44,
           44,
           44,
-          44,
-          44,
-          44,
-          44,
           null,
           44,
           44,
@@ -1435,6 +1431,73 @@
           null
         ]
       },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/presenters/budget_index_presenter.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          44,
+          44,
+          44,
+          44,
+          44,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          44,
+          44,
+          44,
+          44,
+          44,
+          null,
+          null
+        ]
+      },
+      "/Users/harrisfauntleroy/repos/alchemical-finance/app/services/budget_summary_service.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          44,
+          44,
+          44,
+          null,
+          null,
+          1,
+          null,
+          1,
+          44,
+          44,
+          44,
+          44,
+          44,
+          null,
+          null
+        ]
+      },
       "/Users/harrisfauntleroy/repos/alchemical-finance/app/services/budget_distribution_service.rb": {
         "lines": [
           null,
@@ -1447,8 +1510,8 @@
           null,
           1,
           44,
-          54,
-          54,
+          74,
+          74,
           null,
           null,
           null
@@ -1475,17 +1538,17 @@
           null,
           null,
           1,
-          54,
+          74,
           null,
           null,
           1,
-          54,
-          54,
+          74,
+          74,
           null,
           null
         ]
       }
     },
-    "timestamp": 1719066301
+    "timestamp": 1719068321
   }
 }

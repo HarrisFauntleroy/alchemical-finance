@@ -7,13 +7,9 @@ class BudgetsController < ApplicationController
   before_action :set_budget, only: %i[show edit update destroy]
 
   def index
-    @budget = Budget.new
-    @pagy, @budgets = pagy(current_user.budgets.order(created_at: :desc))
     @view = params[:view] || 'annually'
-    @category_distribution = BudgetDistributionService.new(@budgets, @view).category_distribution
-    @total_amount = @category_distribution.values.sum
-    @income = 80_000 # TODO: Replace with actual income
-    @remaining_amount = @income - @total_amount
+    @pagy, budgets = pagy(current_user.budgets.order(created_at: :desc))
+    @presenter = BudgetIndexPresenter.new(current_user, @view, budgets, @pagy)
 
     respond_to do |format|
       format.html

@@ -20,7 +20,7 @@
         style: "max-width: max-content;" %>
       <% end %>
     </div>
-    <% @category_distribution.each do |category, amount| %>
+    <% @presenter.category_distribution.each do |category, amount| %>
       <div class="flex justify-between py-2">
         <span class="font-semibold"><%= category %></span>
         <span><%= number_to_currency(amount, unit: "AUD $") %></span>
@@ -29,15 +29,15 @@
     <hr class="my-4">
     <div class="flex justify-between py-2">
       <span class="font-semibold">Total</span>
-      <span><%= number_to_currency(@total_amount, unit: "AUD $") %></span>
+      <span><%= number_to_currency(@presenter.total_amount, unit: "AUD $") %></span>
     </div>
     <div class="flex justify-between py-2">
       <span class="font-semibold">Income</span>
-      <span><%= number_to_currency(@income, unit: "AUD $") %></span>
+      <span><%= number_to_currency(@presenter.income, unit: "AUD $") %></span>
     </div>
     <div class="flex justify-between py-2">
       <span class="font-semibold">Remaining</span>
-      <span><%= number_to_currency(@remaining_amount, unit: "AUD $") %></span>
+      <span><%= number_to_currency(@presenter.remaining_amount, unit: "AUD $") %></span>
     </div>
   </div>
 </div>
