@@ -3,7 +3,7 @@
     <div class="flex flex-row justify-between w-full">
       <h2 class="text-xl font-semibold">Breakdown</h2>
       <%= form_with url: budgets_path, method: :get, local: true, class: "flex flex-col gap-2 mb-4" do %>
-        <%= select_tag :view,
+        <%= select_tag :budget_frequency,
         options_for_select(
           [
             %w[Daily daily],
@@ -13,7 +13,7 @@
             %w[Quarterly quarterly],
             %w[Annually annually],
           ],
-          params[:view] || "annually",
+          params[:budget_frequency] || "annually",
         ),
         onchange: "this.form.submit()",
         class: "rounded",

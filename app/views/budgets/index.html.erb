@@ -1,16 +1,15 @@
 <div class="mx-auto px-4">
   <h1 class="text-3xl font-semibold text-left py-4">Budgets</h1>
-  <div>
-    <div class="flex flex-row justify-center align-middle h-full gap-4">
-      <div class="flex-1">
-        <%= render "category_distribution_details" %>
-      </div>
-      <div class="flex-1">
-        <%= render "category_distribution" %>
-      </div>
+
+  <div class="flex flex-row justify-center align-middle h-full gap-4">
+    <div class="flex-1" id="budgets_category_distribution_details">
+      <%= render "category_distribution_details" %>
     </div>
-    <turbo-frame id="budgets">
-      <%= render "table" %>
-    </turbo-frame>
+    <div class="flex-1" id="budgets_category_distribution">
+      <%= render "category_distribution" %>
+    </div>
   </div>
+  <turbo-frame id="budgets">
+    <%= render "table" %>
+  </turbo-frame>
 </div>
