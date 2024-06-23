@@ -201,4 +201,30 @@ describe 'Budgets', :js, type: :system do
       expect(page).to have_content('Test Budget', count: 5)
     end
   end
+
+  describe 'displays the budget index page correctly' do
+    before do
+      create_list(:budget, 3, user:, amount: 1000, frequency: 'Monthly')
+      sign_in user
+
+      within '#navigation' do
+        click_link_or_button 'Budgets'
+      end
+    end
+
+    it 'displays the correct "Total" amount' do
+      visit budgets_path(budget_frequency: 'annually')
+      expect(page).to have_text('Total AUD $36,000.00', normalize_ws: true)
+    end
+
+    it 'displays the correct "Income" amount' do
+      visit budgets_path(budget_frequency: 'annually')
+      expect(page).to have_text('Income AUD $60,000.00', normalize_ws: true)
+    end
+
+    it 'displays the correct "Remaining" amount' do
+      visit budgets_path(budget_frequency: 'annually')
+      expect(page).to have_text('Remaining AUD $24,000.00', normalize_ws: true)
+    end
+  end
 end
