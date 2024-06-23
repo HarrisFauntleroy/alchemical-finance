@@ -7,9 +7,9 @@ class BudgetsController < ApplicationController
   before_action :set_budget, only: %i[show edit update destroy]
 
   def index
-    @view = params[:view] || 'annually'
+    @budget_frequency = params[:budget_frequency] || 'annually'
     @pagy, budgets = pagy(current_user.budgets.order(created_at: :desc))
-    @presenter = BudgetIndexPresenter.new(current_user, @view, budgets, @pagy)
+    @presenter = BudgetIndexPresenter.new(current_user, @budget_frequency, budgets, @pagy)
 
     respond_to do |format|
       format.html
