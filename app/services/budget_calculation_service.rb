@@ -20,8 +20,8 @@ class BudgetCalculationService
     @budget = budget
   end
 
-  def amount_for_view(view)
-    multiplier = FREQUENCY_MULTIPLIERS[@budget.frequency][view] || 0
-    @budget.amount * multiplier
+  def amount_for_budget_frequency(budget_frequency)
+    multiplier = FREQUENCY_MULTIPLIERS[@budget.frequency][budget_frequency] || 0
+    (@budget.amount * multiplier).to_f.round(2)
   end
 end

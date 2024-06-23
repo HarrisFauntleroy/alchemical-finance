@@ -3,7 +3,7 @@
 class BudgetSummaryService
   attr_reader :total_amount, :remaining_amount, :category_distribution, :income
 
-  INCOME_ANNUAL = 125_000 # Example annual income. Replace with actual value or fetch from user.
+  INCOME_ANNUAL = 60_000 # Example annual income. Replace with actual value or fetch from user.
 
   FREQUENCY_MULTIPLIERS = {
     'daily' => 1.0 / 365,
@@ -14,9 +14,9 @@ class BudgetSummaryService
     'annually' => 1
   }.freeze
 
-  def initialize(user, view)
+  def initialize(user, budget_frequency)
     @user = user
-    @view = view
+    @budget_frequency = budget_frequency
     calculate_summary
   end
 
@@ -24,9 +24,9 @@ class BudgetSummaryService
 
   def calculate_summary
     budgets = @user.budgets.order(created_at: :desc)
-    @category_distribution = BudgetDistributionService.new(budgets, @view).category_distribution
+    @category_distribution = BudgetDistributionService.new(budgets, @budget_frequency).category_distribution
     @total_amount = @category_distribution.values.sum
-    @income = INCOME_ANNUAL * FREQUENCY_MULTIPLIERS[@view]
+    @income = INCOME_ANNUAL * FREQUENCY_MULTIPLIERS[@budget_frequency]
     @remaining_amount = @income - @total_amount
   end
 end
