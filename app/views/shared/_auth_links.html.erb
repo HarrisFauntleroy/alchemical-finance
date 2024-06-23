@@ -1,13 +1,18 @@
 <div class="flex gap-4">
   <% if user_signed_in? %>
     <!-- Show only if user is signed in -->
-    <span><%= button_to "Sign out",
-      destroy_user_session_path,
+    <%= button_to destroy_user_session_path,
       method: :delete,
-      class: "hover:text-red-400" %></span>
+      class: "flex flex-row gap-2 hover:text-red-400" do %>
+      <%= render "icons/sign_out" %>
+      <span>Sign out</span>
+    <% end %>
+
   <% else %>
     <!-- Show only if user is not signed in -->
-    <span><%= link_to "Sign in", new_user_session_path, class: "hover:text-blue-400" %></span>
-    <span><%= link_to "Sign up", new_user_registration_path, class: "hover:text-blue-400" %></span>
+    <%= link_to new_user_session_path, class: "flex flex-row gap-2  hover:text-blue-400" do %>
+      <%= render "icons/sign_in" %>
+      <span>Sign in</span>
+    <% end %>
   <% end %>
 </div>

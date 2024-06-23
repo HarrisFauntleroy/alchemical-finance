@@ -1,8 +1,22 @@
 <div class="flex gap-4">
-  <span><%= link_to "Income", "#", class: "hover:text-blue-400" %></span>
-  <span><%= link_to "Budgets", budgets_path, class: "hover:text-blue-400" %></span>
-  <span><%= link_to "Accounts", accounts_path, class: "hover:text-blue-400" %></span>
-  <span><%= link_to "Transactions", transactions_path, class: "hover:text-blue-400" %></span>
-  <span><%= link_to "Reports", "#", class: "hover:text-blue-400" %></span>
-  <span><%= link_to "Markets", "#", class: "hover:text-blue-400" %></span>
+  <!-- Link to income -->
+  <%= link_to "#", class: "flex flex-row gap-2 hover:text-blue-400" do %>
+    <%= render "icons/stacked_coins" %>
+    <span>Income</span>
+  <% end %>
+  <!-- Link to budgets -->
+  <%= link_to budgets_path, class: "flex flex-row gap-2 hover:text-blue-400" do %>
+    <%= render "icons/piggy_bank" %>
+    <span>Budgets</span>
+  <% end %>
+  <!-- Link to accounts -->
+  <%= link_to accounts_path, class: "flex flex-row gap-2 hover:text-blue-400" do %>
+    <%= render "icons/wallet" %>
+    <span>Accounts</span>
+  <% end %>
+  <!-- Link to transactions -->
+  <%= link_to transactions_path, class: "flex flex-row gap-2 hover:text-blue-400" do %>
+    <%= render "icons/receipt" %>
+    <span>Transactions</span>
+  <% end %>
 </div>
