@@ -1,4 +1,4 @@
-.PHONY: install dev i18n pretty test rubocop brakeman destructive-init
+.PHONY: install dev i18n pretty test rubocop brakeman reset
 
 install:
 	@echo "Installing dependencies..."
@@ -28,6 +28,6 @@ brakeman:
 	@echo "Running Brakeman for security analysis..."
 	brakeman -z -q
 
-destructive-init:
-	@echo "Reinitializing database (destructive)..."
-	rails db:drop db:create db:schema:load db:migrate db:seed
+reset:
+	echo "Dropping database, reloading with current schema, and seeding..."
+	bin/rails db:reset && bin/rails db:seed
