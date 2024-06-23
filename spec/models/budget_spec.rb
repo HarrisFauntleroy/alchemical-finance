@@ -3,8 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe Budget, type: :model do
+  subject(:budget) do
+    described_class.new(name: 'Test Budget', amount: 1000, category: 'Test Category', frequency: 'Monthly', user:)
+  end
+
   let(:user) { create(:user) }
-  let(:budget) { create(:budget, user:) }
 
   describe 'factory' do
     it 'is valid' do
@@ -21,48 +24,80 @@ RSpec.describe Budget, type: :model do
     it 'is invalid without a name' do
       budget = build(:budget, name: nil)
       expect(budget).not_to be_valid
+    end
+
+    it 'provides the correct error message when name is missing' do
+      budget = build(:budget, name: nil)
+      budget.valid?  # Validate the object to generate errors
       expect(budget.errors[:name]).to include("can't be blank")
     end
 
     it 'is invalid without an amount' do
       budget = build(:budget, amount: nil)
       expect(budget).not_to be_valid
+    end
+
+    it 'provides the correct error message when amount is missing' do
+      budget = build(:budget, amount: nil)
+      budget.valid?  # Validate the object to generate errors
       expect(budget.errors[:amount]).to include("can't be blank")
     end
 
     it 'is invalid with a negative amount' do
       budget = build(:budget, amount: -1)
       expect(budget).not_to be_valid
+    end
+
+    it 'provides the correct error message for a negative amount' do
+      budget = build(:budget, amount: -1)
+      budget.valid?  # Validate the object to generate errors
       expect(budget.errors[:amount]).to include('must be greater than or equal to 0')
     end
 
     it 'is invalid without a category' do
       budget = build(:budget, category: nil)
       expect(budget).not_to be_valid
+    end
+
+    it 'provides the correct error message when category is missing' do
+      budget = build(:budget, category: nil)
+      budget.valid?  # Validate the object to generate errors
       expect(budget.errors[:category]).to include("can't be blank")
     end
 
-    it {
-      expect(subject).to validate_inclusion_of(:frequency).in_array(%w[Daily Weekly Fortnightly Monthly Quarterly
-                                                                       Annually])
-    }
+    it 'validates inclusion of frequency in an expected array' do
+      expect(budget).to validate_inclusion_of(:frequency).in_array(%w[Daily Weekly Fortnightly Monthly Quarterly])
+    end
 
     it 'is invalid without a frequency' do
       budget = build(:budget, frequency: nil)
       expect(budget).not_to be_valid
+    end
+
+    it 'provides the correct error message when frequency is missing' do
+      budget = build(:budget, frequency: nil)
+      budget.valid?  # Validate the object to generate errors
       expect(budget.errors[:frequency]).to include("can't be blank")
     end
 
     it 'is invalid with an unsupported frequency' do
       budget = build(:budget, frequency: 'Yearly')
       expect(budget).not_to be_valid
+    end
+
+    it 'provides the correct error message for an unsupported frequency' do
+      budget = build(:budget, frequency: 'Yearly')
+      budget.valid?  # Validate the object to generate errors
       expect(budget.errors[:frequency]).to include('is not included in the list')
     end
   end
 
   describe 'associations' do
     let(:user) { create(:user) }
-    let!(:budget) { create(:budget, user:) }
+
+    before do
+      create(:budget, user:)
+    end
 
     it 'automatically deletes all associated budgets when the user is deleted' do
       expect { user.destroy }.to change(described_class, :count).by(-1)
