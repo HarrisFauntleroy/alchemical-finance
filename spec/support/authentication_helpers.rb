@@ -30,8 +30,8 @@ module AuthenticationHelpers
   private
 
   def navigate_to_sign_up
-    visit root_path
-    within('#navigation') { click_on 'Sign up' }
+    navigate_to_sign_in
+    click_on 'Sign up'
   end
 
   def navigate_to_sign_in
