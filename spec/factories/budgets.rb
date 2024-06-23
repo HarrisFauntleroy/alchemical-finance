@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :budget do
     name { 'Test Budget' }
 
-    user
+    association :user
 
     amount { '9.99' }
     category { 'Test Category' }
