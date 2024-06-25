@@ -1,12 +1,36 @@
-.PHONY: install dev i18n pretty test rubocop brakeman reset
+.PHONY: install rails-c dev db-console db-reset db-seed redis-start redis-stop i18n pretty rspec rubocop brakeman
 
 install:
 	@echo "Installing dependencies..."
 	bundle install
 
+rails-c:
+	@echo "Opening the Rails console..."
+	bundle exec rails c
+
 dev:
 	@echo "Starting the development server..."
 	./bin/dev
+
+db-console:
+	@echo "Opening the database console..."
+	bundle exec rails db
+
+db-reset:
+	@echo "Resetting the database..."
+	bundle exec rails db:reset
+
+db-seed:
+	@echo "Seeding database..."
+	bundle exec rails db:seed
+
+redis-start:
+	@echo "Starting Redis server..."
+	brew services start redis
+
+redis-stop:
+	@echo "Stopping Redis server..."
+	brew services stop redis
 
 i18n:
 	@echo "Normalizing and checking i18n tasks..."
@@ -14,20 +38,16 @@ i18n:
 
 pretty:
 	@echo "Formatting ERB templates..."
-	erb-format app/views/**/*.html.erb --write
+	bundle exec erb-format app/views/**/*.html.erb --write
 
-test:
-	@echo "Running tests..."
-	rspec
+rspec:
+	@echo "Running specs..."
+	bundle exec rspec
 
 rubocop:
 	@echo "Running RuboCop for linting and auto-corrections..."
-	rubocop -A
+	bundle exec rubocop -A
 
 brakeman:
 	@echo "Running Brakeman for security analysis..."
-	brakeman -z -q
-
-reset:
-	echo "Dropping database, reloading with current schema, and seeding..."
-	bin/rails db:reset && bin/rails db:seed
+	bundle exec brakeman -z -q
