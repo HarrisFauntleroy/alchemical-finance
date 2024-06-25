@@ -1,25 +1,12 @@
+<!-- **Project Title** -->
+## Alchemical Finance
+
 <!-- **Project Image (Optional)** -->
 <div align="center">
     <a href="">
         <img src="public/images/logo.png?raw=true" alt="Alchemical Finance Logo" height="140" />
     </a>
-    <h5 align="center">
-      Alchemical Finance
-    </h5>
-    <p align="center">
-        <a target="_blank" href="">💵</a>
-        &middot;
-        <a target="_blank" href="">💷</a>
-        &middot;
-        <a target="_blank" href="">💴</a>
-        &middot;
-        <a target="_blank" href="">💶</a>
-    </p>
 </div>
-
-<!-- **Project Title** -->
-
-## Alchemical Finance
 
 <!-- **Project Badges** -->
 <p align="center">
@@ -51,7 +38,7 @@
 
 <!-- **Project Description** -->
 
-Alchemical Finance is a platform for managing and tracking personal finances. It is currently in alpha development, but it already includes a number of features, such as user account creation and management, manual input account tracking, and robust security features.
+Alchemical Finance is a platform for managing and tracking personal finances. It is currently in alpha development.
 
 ### Planned Features
 - Automated account tracking
