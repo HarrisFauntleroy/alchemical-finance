@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Service to calculate budget distribution across categories for a user
 class BudgetDistributionService
   def initialize(budgets, budget_frequency)
     @budgets = budgets

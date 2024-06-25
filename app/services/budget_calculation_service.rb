@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Service to calculate views based on the budget frequency
 class BudgetCalculationService
   FREQUENCY_MULTIPLIERS = {
     'Daily' => { 'daily' => 1, 'weekly' => 7, 'fortnightly' => 14, 'monthly' => 30, 'quarterly' => 90,
@@ -21,7 +22,7 @@ class BudgetCalculationService
   end
 
   def amount_for_budget_frequency(budget_frequency)
-    multiplier = FREQUENCY_MULTIPLIERS[@budget.frequency][budget_frequency] || 0
+    multiplier = FREQUENCY_MULTIPLIERS.dig(@budget.frequency, budget_frequency) || 0
     (@budget.amount * multiplier).to_f.round(2)
   end
 end

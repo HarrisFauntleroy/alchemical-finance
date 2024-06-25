@@ -56,6 +56,14 @@ is currently in alpha development, but it already includes a number of features,
 such as user account creation and management, manual input account tracking, and
 robust security features.
 
+Planned Features include:
+- Automated account tracking
+- Budgeting and expense tracking
+- Investment tracking
+- Financial goal setting
+- Double-entry accounting
+- Multi-currency support
+
 <!-- **Table of contents** -->
 <!-- **Architecture (Optional)** -->
 <!-- **Local development** -->
