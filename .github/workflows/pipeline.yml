@@ -41,6 +41,13 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
 
+      - name: Upload Capybara Screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: capybara-screenshots
+          path: tmp/capybara
+
       - name: Run RuboCop
         run: bundle exec rubocop
   
